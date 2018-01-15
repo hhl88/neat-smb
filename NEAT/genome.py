@@ -232,8 +232,6 @@ class Genome(object):
             self.innovation.list_gene.append(gene2)
         self.genes.append(gene2)
 
-        # print "gene 1 : %s" % gene1
-        # print "gene 2 : %s" % gene2
         self.genes.sort()
 
         new_neuron.inputs.append(gene1)
