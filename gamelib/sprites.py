@@ -35,6 +35,7 @@ class Collidable(pygame.sprite.Sprite):
         self.collision_groups = []
         self.xoffset = 0
         self.yoffset = 1
+        self.speed = 300
 
     def collide(self, group):
         if group not in self.collision_groups:

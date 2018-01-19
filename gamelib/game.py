@@ -1,12 +1,11 @@
 #! /usr/bin/env python
-
+import re
 import sys, os
 import random
 
 import pygame
 from pygame.locals import *
 
-from NEAT.genome import Genome
 from cutscenes import *
 from  data import *
 from sprites import *
@@ -15,6 +14,7 @@ import random
 from NEAT.generation import *
 import numpy as np
 import pickle
+import re
 
 choices = ["SHORT JUMP", "LONG JUMP", "RIGHT", "LEFT"]
 
@@ -94,7 +94,7 @@ def get_saved_lives():
 
 
 class Game(object):
-    def __init__(self, neural_network, continuing=False):
+    def __init__(self, continuing=False):
         os.environ["SDL_VIDEO_CENTERED"] = "1"
         # pygame.mixer.pre_init(44100, -16, 2, 4096)
 
@@ -103,7 +103,6 @@ class Game(object):
         pygame.display.set_icon(pygame.image.load(filepath("bowser1.gif")))
         pygame.display.set_caption("Super Mario Python")
         screen = pygame.display.set_mode((640, 480), HWSURFACE | DOUBLEBUF | RESIZABLE)
-        self.neural_network = neural_network
         self.generation = None
         self.current_fitness = 0
         self.last_fitness = 0
@@ -400,12 +399,16 @@ class Game(object):
         # self.neural_network.initialize_generation()
 
         filelist = []
-        for file in os.listdir(os.getcwd()):
-            if file.endswith(".json"):
+        save_path = os.getcwd() + "/records/generation/"
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
+        for file in os.listdir(save_path):
+            if file.endswith(".json") and re.match(r'generation_', file):
                 filelist.append(file)
         if len(filelist) >= 1:
-            filelist.sort()
-            with open(filelist[len(filelist) -1], 'rb') as f:
+            filelist.sort(cmp=lambda x, y : 1 if self.find_number(x) - self.find_number(y) > 0 else
+                                            0 if self.find_number(x) == self.find_number(y) else -1)
+            with open(save_path + filelist[len(filelist) -1], 'rb') as f:
                 self.generation = pickle.load(f)
 
         self.main_loop()
@@ -767,17 +770,24 @@ class Game(object):
                 self.bg = load_image("background-2.png")
 
             if self.player.rect.right > self.camera.world.w:
-                if not self.toads and self.lvl < 30:
-                    # self.next_level()
-                    self.player.kill()
-                else:
-                    self.player.rect.right = self.camera.world.w
-
-            if self.player.rect.right > self.camera.world.w:
-                # self.next_level()
                 if self.generation.max_fitness < genome.fitness:
-                    self.generation.solution_genome = genome
+                    self.generation.solved = True
+                    if not self.generation.solution_genome.__contains__(genome):
+                        self.generation.solution_genome = genome
                     self.player.kill()
+                # if not self.toads and self.lvl < 30:
+                    # self.next_level()
+                    # self.player.kill()
+                # else:
+                #     self.player.rect.right = self.camera.world.w
+
+            # if self.player.rect.right > self.camera.world.w:
+                # self.next_level()
+                # if self.generation.max_fitness < genome.fitness:
+                #     self.generation.solved = True
+                #     if not self.generation.solution_genome.__contains__(genome):
+                #         self.generation.solution_genome = genome
+                #     self.player.kill()
 
             self.player.collide(self.platforms)
             self.player.collide(self.springs)
@@ -1066,7 +1076,9 @@ class Game(object):
                     if outputs[0] > 0 and outputs[1] > 0:
                         outputs[0] = 0.0
                         outputs[1] = 0.0
-                    # print output
+                    if outputs[2] > 0 and outputs[3] > 0:
+                        outputs[2] = 0.0
+                    # print outputs
                     decisions = self.make_decision(outputs)
                     # print "decisions = [%s]" % decisions
                     for decision in decisions:
@@ -1087,15 +1099,16 @@ class Game(object):
 
             if (not self.player.alive() and not self.playerdying) or self.start_new_game:
                 genome.fitness = self.current_fitness
+                self.generation.list_fitness.append(genome.fitness)
 
-                # if genome.fitness > species.top_fitness:
-                #     species.top_fitness = genome.fitness
+                if genome.fitness > self.generation.current_max_fitness:
+                    self.generation.current_max_fitness = genome.fitness
                 if genome.fitness > self.generation.max_fitness:
                     self.generation.max_fitness = genome.fitness
                     self.save_records()
-                print "generation[%d]---species[%d]-------genome [%d]------len genome = %d " % (
-                    self.generation.generation_number, self.generation.current_species + 1,
-                    self.generation.current_genome+ 1, len(species.genomes))
+                # print "generation[%d]---species[%d]-------genome [%d]------len genome = %d " % (
+                #     self.generation.generation_number, self.generation.current_species + 1,
+                #     self.generation.current_genome + 1, len(species.genomes))
                 print "fitness = %d -------- top fitness of species = %d --------max fitness in generation= %d" % \
                       (genome.fitness, species.top_fitness, self.generation.max_fitness)
                 genomes = (g.genes for g in species.genomes)
@@ -1127,24 +1140,27 @@ class Game(object):
                 self.save_records()
                 return
 
+    def find_number(self, text):
+        return (int)(re.split('(\d+)', text)[1])
+
     def save_records(self):
+        save_path = os.getcwd() + "/records/generation/"
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
         filename = "generation_%d.json" % self.generation.generation_number
-        with open(filename, 'wb') as f:
+        complete_name = os.path.join(save_path, filename)
+        with open(complete_name, 'wb') as f:
             pickle.dump(self.generation, f)
 
     def initialize_neural_network(self):
-        # print "in initialize neural network"
         self.generation = Generation()
         self.generation.initialize_generation()
-        # self.generation.initialize_genomes()
         self.generation.initialize_game()
-        # self.generation.initialize_game()
 
     def run_neural_network(self):
         inputs = self.get_inputs()
         species = self.generation.species[self.generation.current_species]
         genome = species.genomes[self.generation.current_genome]
-        # print "current genome = %d" % self.generation.current_genome
         return genome.evaluate_network(inputs)
 
     def get_inputs(self):
@@ -1154,7 +1170,7 @@ class Game(object):
         if min_x >= 48:
             min_x = min_x + 32
         inputs = [[0 for x in xrange(20)] for y in xrange(16)]
-        inputs[self.player.rect.center[1] / 32][(self.player.rect.center[0] - min_x) / 32] = 3
+        # inputs[self.player.rect.center[1] / 32][(self.player.rect.center[0] - min_x) / 32] = 2
         for s in sprite_list:
             y = [s.rect.center[1] / 32]
             x = [(s.rect.center[0] - min_x) / 32]
@@ -1205,7 +1221,7 @@ class Game(object):
             elif self.is_flag(s):
                 for i in xrange(len(y)):
                     for j in xrange(len(x)):
-                        inputs[y[i]][x[j]] = 4
+                        inputs[y[i]][x[j]] = 3
             elif abs(s.rect.center[0] - self.player.rect.center[0]) < 100 and \
                     abs(s.rect.center[1] - self.player.rect.center[1]) < 100:
                 for i in xrange(len(y)):

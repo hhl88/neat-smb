@@ -21,19 +21,22 @@ class Species(object):
         self.genome_id += 1
         return current_genome_id
 
-    def breed_child(self):
+    def breed_child(self, best_genome= None):
         new_genome = None
         self.genomes.sort()
         if len(self.genomes) > 1:
             if np.random.uniform() < config.CROSSOVER_CHANCE:
+                # random_num1 = 0
                 random_num1 = random.randint(0, len(self.genomes) -1)
-                random_num2 = 0
                 while True:
                     random_num2 = random.randint(0, len(self.genomes) -1)
                     if random_num1 != random_num2:
                         break
                 random_genome1 = self.genomes[random_num1]
-                random_genome2 = self.genomes[random_num2]
+                if best_genome is None:
+                    random_genome2 = self.genomes[random_num2]
+                else:
+                    random_genome2 = best_genome
                 new_genome = self.crossover(random_genome1, random_genome2)
             else:
                 new_genome = np.random.choice(self.genomes).copy_genome()

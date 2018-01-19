@@ -19,13 +19,23 @@ class Genome(object):
                              ENABLE_MUTATION_CHANCE,
                              DISABLE_MUTATION_CHANCE]
 
+    def __eq__(self, other):
+        if isinstance(other, Genome):
+            return False
+        return self.genome_id == other.genome_id
+
     def __cmp__(self, other):
         if self.fitness > other.fitness:
             return -1
         elif self.fitness < other.fitness:
             return 1
         else:
-            return 0
+            if self.genome_id < other.genome_id:
+                return -1
+            elif self.genome_id > other.genome_id:
+                return 1
+            else:
+                return 0
 
     def copy_genome(self):
         new_genome = Genome(self.innovation)
@@ -44,7 +54,7 @@ class Genome(object):
         for i in xrange(0, OUTPUT_NEURONS):
             self.network[i + INPUT_NEURONS] = Neuron()
 
-        # self.genes.sort()
+        self.genes.sort()
 
         for gene in self.genes:
             if gene.enabled:
@@ -115,8 +125,9 @@ class Genome(object):
         return outputs
 
     def mutate(self):
+
         for i in xrange(0, len(self.mutate_rates)):
-            self.mutate_rates[i] *= (0.95 if np.random.uniform() < 0.5 else 1.05263)
+            self.mutate_rates[i] *= (0.95 if np.random.uniform() < 0.5 else 1.2)
         # mutate weight
         if np.random.uniform() < self.mutate_rates[0]:
             self.mutate_weight()
@@ -145,7 +156,7 @@ class Genome(object):
             gene.mutate_weight()
 
     def mutate_step(self, mutate_type, rate):
-        n = rate
+        n = rate * 1.0
         while n >= 0:
             if np.random.uniform() < n:
                 mutate_type
@@ -176,7 +187,7 @@ class Genome(object):
             new_gene.input = INPUT_NEURONS - 1
         if self.contain_connection(new_gene):
             return
-        new_gene.weight = np.random.uniform(low=-2, high=2)
+        new_gene.weight = np.random.uniform(low=-1, high=1)
         if self.innovation.contain_links(new_gene):
             new_gene.innovation_number = self.innovation.get_innovation(new_gene)
         else:
