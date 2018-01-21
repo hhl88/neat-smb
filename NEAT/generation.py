@@ -49,10 +49,10 @@ class Generation(object):
         for species in self.species:
             breed = int(math.floor(species.average_fitness * POPULATION / sum_fitness))
             for i in xrange(0, breed):
-                if not self.solved or np.random.uniform() > 0.6:
-                    childs.append(species.breed_child())
-                else:
-                    childs.append(species.breed_child(np.random.choice(self.solution_genome)))
+                # if not self.solved or np.random.uniform() > 0.6:
+                childs.append(species.breed_child())
+                # else:
+                #     childs.append(species.breed_child(np.random.choice(self.solution_genome)))
 
         self.take_best_genomes_in_species(True)
 
@@ -105,7 +105,7 @@ class Generation(object):
 
         ax.legend(['max fitness', 'average fitness'], loc='center left', bbox_to_anchor=(1, 0.5))
         max_length = len(self.results)
-        max_interval = 10 ** (len(str(max_length)) - 1)
+        max_interval = 10 ** max(0, (len(str(max_length)) - 2))
 
         # min_interval = max_length / 2
         max_length = int(math.ceil(max_length / float(max_interval) + 1) * max_interval)
@@ -139,7 +139,7 @@ class Generation(object):
             self.current_species += 1
             self.current_genome = 0
 
-            if self.current_species >= len(self.species)or  self.current_species >= POPULATION :
+            if self.current_species >= len(self.species):
                 self.create_new_generation()
                 self.current_species = 0
                 self.species_id = 0
@@ -186,7 +186,7 @@ class Generation(object):
         for species in self.species:
             species.genomes.sort()
             if len(species.genomes) > 1:
-                if species.genomes[1].fitness >= species.top_fitness - 500:
+                if species.genomes[1].fitness >= species.top_fitness:
                     species.top_fitness = species.genomes[1].fitness
                     species.staleness = 0
                 else:

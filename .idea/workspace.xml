@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6893913e-e7ad-405c-aee1-22e92c72f084" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/records/generation/generation_1.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/records/graphs/graph.pyw" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/records/graphs/records.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/records/graphs/results.json" />
-      <change beforePath="$PROJECT_DIR$/.idea/Super-Mario-Bros-Project.iml" afterPath="$PROJECT_DIR$/.idea/Super-Mario-Bros-Project.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/records/generation/generation_101.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/records/graphs/records_100_generation.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/NEAT/config.py" afterPath="$PROJECT_DIR$/NEAT/config.py" />
-      <change beforePath="$PROJECT_DIR$/NEAT/gene.py" afterPath="$PROJECT_DIR$/NEAT/gene.py" />
       <change beforePath="$PROJECT_DIR$/NEAT/generation.py" afterPath="$PROJECT_DIR$/NEAT/generation.py" />
-      <change beforePath="$PROJECT_DIR$/NEAT/genome.py" afterPath="$PROJECT_DIR$/NEAT/genome.py" />
-      <change beforePath="$PROJECT_DIR$/NEAT/species.py" afterPath="$PROJECT_DIR$/NEAT/species.py" />
-      <change beforePath="$PROJECT_DIR$/Super Mario Python.pyw" afterPath="$PROJECT_DIR$/Super-Mario-Python.pyw" />
       <change beforePath="$PROJECT_DIR$/gamelib/game.py" afterPath="$PROJECT_DIR$/gamelib/game.py" />
-      <change beforePath="$PROJECT_DIR$/gamelib/sprites.py" afterPath="$PROJECT_DIR$/gamelib/sprites.py" />
-      <change beforePath="$PROJECT_DIR$/trainer_mario.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/records/graphs/graph.pyw" afterPath="$PROJECT_DIR$/records/graphs/graph.pyw" />
+      <change beforePath="$PROJECT_DIR$/records/graphs/records.png" afterPath="$PROJECT_DIR$/records/graphs/records.png" />
+      <change beforePath="$PROJECT_DIR$/records/graphs/results.json" afterPath="$PROJECT_DIR$/records/graphs/results.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NEAT/generation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="109" column="23" lean-forward="false" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
+            <state relative-caret-position="551">
+              <caret line="131" column="26" lean-forward="false" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -46,38 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="records.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/records/graphs/records.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="genome.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NEAT/genome.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neuron.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NEAT/neuron.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gamelib/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17790">
-              <caret line="1201" column="70" lean-forward="false" selection-start-line="1201" selection-start-column="70" selection-end-line="1201" selection-end-column="70" />
+            <state relative-caret-position="19965">
+              <caret line="1346" column="40" lean-forward="false" selection-start-line="1346" selection-start-column="38" selection-end-line="1346" selection-end-column="40" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
@@ -85,24 +51,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="species.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NEAT/species.py">
+      <file leaf-file-name="graph.pyw" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/records/graphs/graph.pyw">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="97">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.pyw" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/records/graphs/graph.pyw">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NEAT/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,8 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>air</find>
-      <find>Q</find>
       <find>platform</find>
       <find>take_half_best_species</find>
       <find>countdown_time</find>
@@ -148,6 +112,8 @@
       <find>60</find>
       <find>self.clock</find>
       <find>self.sol</find>
+      <find>self.solu</find>
+      <find>1</find>
     </findStrings>
     <replaceStrings>
       <replace>Gene</replace>
@@ -193,15 +159,15 @@
         <option value="$PROJECT_DIR$/generation_5.json" />
         <option value="$PROJECT_DIR$/generation_2.json" />
         <option value="$PROJECT_DIR$/Super Mario Python.pyw" />
-        <option value="$PROJECT_DIR$/NEAT/config.py" />
         <option value="$PROJECT_DIR$/Super-Mario-Python.pyw" />
-        <option value="$PROJECT_DIR$/records/graphs/graph.pyw" />
         <option value="$PROJECT_DIR$/gamelib/sprites.py" />
         <option value="$PROJECT_DIR$/NEAT/genome.py" />
         <option value="$PROJECT_DIR$/NEAT/gene.py" />
         <option value="$PROJECT_DIR$/NEAT/species.py" />
+        <option value="$PROJECT_DIR$/NEAT/config.py" />
         <option value="$PROJECT_DIR$/gamelib/game.py" />
         <option value="$PROJECT_DIR$/NEAT/generation.py" />
+        <option value="$PROJECT_DIR$/records/graphs/graph.pyw" />
       </list>
     </option>
   </component>
@@ -215,6 +181,25 @@
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyPep8Inspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -258,14 +243,20 @@
               <item name="Super-Mario-Bros-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Super-Mario-Bros-Project" type="462c0819:PsiDirectoryNode" />
               <item name="records" type="462c0819:PsiDirectoryNode" />
+              <item name="generation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Super-Mario-Bros-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Super-Mario-Bros-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="records" type="462c0819:PsiDirectoryNode" />
               <item name="graphs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Super Mario Python.pyw">
+  <component name="RunManager" selected="Python.graph.pyw">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,6 +457,25 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="Super Mario Bros Python Final (discontinued)" />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Super Mario Bros Python Final (discontinued)" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -513,25 +523,6 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Super Mario Bros Python Final (discontinued)" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Super Mario Python.pyw" />
       <item index="1" class="java.lang.String" itemvalue="Python.generation" />
@@ -541,8 +532,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Super Mario Python.pyw" />
-        <item index="1" class="java.lang.String" itemvalue="Python.graph.pyw" />
+        <item index="0" class="java.lang.String" itemvalue="Python.graph.pyw" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Super Mario Python.pyw" />
         <item index="2" class="java.lang.String" itemvalue="Python.species" />
         <item index="3" class="java.lang.String" itemvalue="Python.genome" />
         <item index="4" class="java.lang.String" itemvalue="Python.generation" />
@@ -577,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516018849910</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added graph">
+      <created>1516361017783</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516361017783</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -591,22 +589,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13733906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="597" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13733906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="597" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43004417" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43004417" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22818312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115879826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42989987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3941345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39911634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -646,7 +643,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="added graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="added graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -970,14 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NEAT/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/scale.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1002,20 +992,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results.json" />
-    <entry file="file://$PROJECT_DIR$/records/graphs/graph.pyw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gamelib/sprites.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NEAT/gene.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,10 +1012,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NEAT/gene.py">
+    <entry file="file://$PROJECT_DIR$/NEAT/genome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="310">
+          <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1040,17 +1028,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NEAT/genome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NEAT/species.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="310">
           <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding />
         </state>
@@ -1058,8 +1038,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gamelib/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17790">
-          <caret line="1201" column="70" lean-forward="false" selection-start-line="1201" selection-start-column="70" selection-end-line="1201" selection-end-column="70" />
+        <state relative-caret-position="19965">
+          <caret line="1346" column="40" lean-forward="false" selection-start-line="1346" selection-start-column="38" selection-end-line="1346" selection-end-column="40" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
@@ -1068,11 +1048,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NEAT/generation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="109" column="23" lean-forward="false" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
+        <state relative-caret-position="551">
+          <caret line="131" column="26" lean-forward="false" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/records/graphs/graph.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NEAT/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

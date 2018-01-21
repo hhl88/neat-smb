@@ -340,6 +340,7 @@ class Game(object):
             self.lives = 99
         self.player = Player((0, 0))
         self.clock = pygame.time.Clock()
+        self.clock.tick(120)
         self.bg = load_image("background-2.png")
         self.level = Level(self.lvl)
         self.camera = Camera(self.player, self.level.get_size()[0])
@@ -739,7 +740,7 @@ class Game(object):
 
             self.boom_timer -= 1
 
-            self.clock.tick(60)
+            self.clock.tick(120)
             self.camera.update()
             for s in self.sprites:
                 s.update()
@@ -1329,11 +1330,22 @@ class Game(object):
         self.screen.blit(ren, (150 - ren.get_width(), 18))
         ren = self.font.render("FPS %d" % self.clock.get_fps(), 1, (255, 255, 255))
         self.screen.blit(ren, (540, 1))
-        ren = self.font.render("Fitness %s" % self.current_fitness, 1, (255, 255, 255))
-        self.screen.blit(ren, (400, 18))
         ren1 = self.font.render("Time: %d" % self.time, 1, (255, 255, 255))
         # ren2 = self.font.render("Time: %d" % self.time, 1, Color("#ffffff"))
         self.screen.blit(ren1, (150 + ren.get_width(), 1))
+
+        ren = self.font.render("Generation %d" % self.generation.generation_number, 1, (255,255,255))
+        self.screen.blit(ren, (8, 37))
+
+        ren = self.font.render("Species %d" % (self.generation.current_species + 1), 1, (255,255,255))
+        self.screen.blit(ren, (250, 37))
+
+        ren = self.font.render("Genome %d" % (self.generation.current_genome + 1), 1, (255,255,255))
+        self.screen.blit(ren, (440, 37))
+
+        ren = self.font.render("Fitness %s" % self.current_fitness, 1, (255, 255, 255))
+        self.screen.blit(ren, (440, 18))
+
         # self.screen.blit(ren2, (130 + ren.get_width(), 18))
         # if self.time <= 100:
         #     ren = self.font.render("GOTTA GO FAST", 1, (255, 255, 255))
